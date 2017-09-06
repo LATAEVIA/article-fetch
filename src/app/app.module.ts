@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ListingService} from 'listing.service'
+import {ListingService} from './listing.service'
+
 @NgModule({
   declarations: [
     AppComponent
