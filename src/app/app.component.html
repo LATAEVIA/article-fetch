@@ -1,18 +1,66 @@
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
-</div>
+</div> -->
+
+<!-- <h1>Martian Rover Photos:</h1>
+<h2> From {{articles[0].title}} </h2>
+<div *ngFor="let article of articles;" class="photo">
+  <img src = {{article.id}}/>
+</div> -->
+
+<!-- <div class="container-fluid">
+  <div ng-repeat="a in articles">
+    <div class="card" ng-repeat="listing in a.listings">
+      <h4 class="card-title">
+        <a>{{a[1].title}}</a>
+      </h4>
+      <p class="card-text">{{a[1].abstract}}</p>
+    </div>
+  </div>
+    <a href="#" class="btn btn-info">Load More</a>
+</div> -->
+<!--
+<ul>
+  <div ng-repeat="o in orders">
+    <li ng-repeat="p in o.parcels">{{p.upid}}</li>
+  </div>
+</ul> -->
 
 
-<!-- <div class="container-fluid" ng-app="ListsAndJunk">
-  <div ng-controller="ArticleCtrl">
-    <div class="card" ng-repeat="article in articles">
+<!-- <ul>
+    <li ng-repeat-start="a in articles">
+      <strong> {{article.id}}</strong>
+    </li>
+    <li ng-repeat-end ng-repeat="album in artist.albums">{{album.title}}</li>
+</ul> -->
+
+
+
+
+<!-- <ul >
+  <p>test</p>
+  <li *ngFor="let obj of articles">[{{obj | json}}] <p>test 3</p></li>
+  <p>test2</p> -->
+    <!-- <li> -->
+        <!-- <p>{{key}} - {{val}}</p> -->
+
+        <!-- <ul ng-repeat="(key,val) in artist.albums">
+
+            <li>{{key}} - {{val}}</li>
+
+        </ul>  -->
+    <!-- </li> -->
+<!-- </ul> -->
+
+<div class="container-fluid">
+  <div *ngFor="let article of articles">
       <h4 class="card-title">
         <a>{{article.title}}</a>
       </h4>
       <p class="card-text">{{article.abstract}}</p>
-    </div>
-    <a href="#" class="btn btn-info">Load More</a>
+    <!-- </div> -->
   </div>
-</div> -->
+    <a href="#" class="btn btn-block btn-info">Load More</a>
+</div>
