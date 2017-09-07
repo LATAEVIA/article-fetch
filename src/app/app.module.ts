@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ListingService} from './listing.service'
+import {ArticleService} from './article.service'
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import {ListingService} from './listing.service'
     BrowserModule,
     HttpModule
   ],
-  providers: [ListingService],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
