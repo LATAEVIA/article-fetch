@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from 'app/article.service';
+import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
 
   }
 
+  limit = 10;
   articles = [];
   moreArticles = [];
   ngOnInit(){

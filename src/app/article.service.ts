@@ -14,7 +14,7 @@ export class ArticleService {
 
 
   }
-  private someArticlesUrl:string = "https://submissions.scholasticahq.com/api/v1/articles.json?per_page=10";
+  private someArticlesUrl:string = "https://submissions.scholasticahq.com/api/v1/articles.json";
   getArticles() {
     return this.http.get(this.someArticlesUrl).map((response:Response) => this.data = response.json()['articles']);
     // return this.http
@@ -29,10 +29,9 @@ export class ArticleService {
     .get(this.moreArticlesUrl)
     .map((response:Response) => this.data = response.json()['articles'])
     // .push(articles);
-
     // return this.http
     // .get(this.moreArticlesUrl)
     // .subscribe(resp => {console.log(resp)});
-
   }
+  
 }

@@ -1,19 +1,13 @@
 <div class="container-fluid">
-  <div *ngFor="let article of articles">
-      <h4 class="card-title">
-        <a>{{article.title}}</a>
-      </h4>
-      <p class="card-text">{{article.abstract}}</p>
+  <div *ngFor="let article of articles | slice:0:limit">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">
+          <a>{{article.title}}</a>
+        </h4>
+        <p class="card-text">{{article.abstract}}</p>
+      </div>
+    </div>
   </div>
-
-  <button type="button" class="btn btn-block btn-info" (click)="articleService.getMoreArticles()">Load More</button>
-
-  <div *ngFor="let articles of moreArticles">
-      <h4 class="card-title">
-        <a>{{articles.title}}</a>
-      </h4>
-      <p class="card-text">{{articles.abstract}}</p>
-  </div>
+  <button type="button" class="btn btn-block btn-info" (click)="limit=limit+10">Load More</button>
 </div>
-
-<!-- <more-articles></more-articles> -->
