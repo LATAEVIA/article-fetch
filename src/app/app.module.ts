@@ -3,8 +3,11 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ArticleService} from './article.service';
 import { SingleArticleComponent } from './single-article/single-article.component'
+
+import {ArticleService} from './article.service';
+
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,8 @@ import { SingleArticleComponent } from './single-article/single-article.componen
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]
