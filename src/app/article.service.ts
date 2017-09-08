@@ -23,6 +23,6 @@ export class ArticleService {
   // }
 
   getAtricleById(id: string) {
-    return this.http.get("https://submissions.scholasticahq.com/api/v1/articles/" +id+ "68.json");
+    return this.http.get("https://submissions.scholasticahq.com/api/v1/articles/" +id+ ".json");
   }
 }
