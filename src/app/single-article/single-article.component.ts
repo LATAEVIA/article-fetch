@@ -1,4 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { AppComponent } from '../app.component';
+import { Listing } from 'app/listing.model';
+
 
 @Component({
   selector: 'app-single-article',
@@ -6,14 +11,18 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: [],
   inputs: ['childSingleArticles']
 })
-export class SingleArticleComponent{
+export class SingleArticleComponent implements OnInit{
   @Input() childSingleArticles;
+  articleId: number = null;
   // @Input('singleArticles');
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
-    var singleArticles = this.childSingleArticles;
-    console.log(this.childSingleArticles)
-    console.log(singleArticles)
+    // var singleArticles = this.childSingleArticles;
+    // console.log(this.childSingleArticles)
+    // console.log(singleArticles)
+    this.route.params.forEach((urlParameters) => {
+      this.articleId = parseInt(urlParameters['id']);
+    });
   }
 }

@@ -3,11 +3,16 @@
     <div class="card">
       <div class="card-block">
         <h4 class="card-title">
-          <a (click)='articleService.getSingleAtricle(article.id)'>{{article.title}}</a>
+          <!-- <a (click)="getSingleAtricle(article.id)">{{article.title}}</a> -->
+          <a (click)="goToSingleArticlePage(article)">{{article.title}}</a>
         </h4>
         <p class="card-text">{{article.abstract}}</p>
       </div>
     </div>
   </div>
   <button type="button" class="btn btn-block btn-info" (click)="limit=limit+10">Load More</button>
+</div>
+
+<div *ngIf="singleArticles">
+  <app-single-article [childSingleArticles]="singleArticles"></app-single-article>
 </div>
