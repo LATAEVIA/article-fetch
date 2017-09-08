@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-block">
         <h4 class="card-title">
-          <a>{{article.title}}</a>
+          <a (click)='articleService.getSingleAtricle(article.id)'>{{article.title}}</a>
         </h4>
         <p class="card-text">{{article.abstract}}</p>
       </div>

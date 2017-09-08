@@ -10,28 +10,19 @@ import 'rxjs/add/operator/map';
 export class ArticleService {
   data: Object;
 
-  constructor(private http:Http) {
+  constructor(private http:Http) {}
 
-
-  }
   private someArticlesUrl:string = "https://submissions.scholasticahq.com/api/v1/articles.json";
   getArticles() {
     return this.http.get(this.someArticlesUrl).map((response:Response) => this.data = response.json()['articles']);
-    // return this.http
-    // .get(this.someArticlesUrl)
-    // .subscribe(resp => {console.log(resp)});
   }
 
-  private moreArticlesUrl:string = "https://submissions.scholasticahq.com/api/v1/articles.json?per_page=10&offset=10";
-  getMoreArticles() {
-    // return this.http.get(this.moreArticlesUrl).map((response:Response) => this.data = response.json()['articles']);
-    return this.http
-    .get(this.moreArticlesUrl)
-    .map((response:Response) => this.data = response.json()['articles'])
-    // .push(articles);
-    // return this.http
-    // .get(this.moreArticlesUrl)
-    // .subscribe(resp => {console.log(resp)});
+  // private moreArticlesUrl:string = "https://submissions.scholasticahq.com/api/v1/articles.json?per_page=10&offset=10";
+  // getMoreArticles() {
+  //   return this.http.get(this.moreArticlesUrl).map((response:Response) => this.data = response.json()['articles']);
+  // }
+
+  getAtricleById(id: string) {
+    return this.http.get("https://submissions.scholasticahq.com/api/v1/articles/" +id+ "68.json");
   }
-  
 }

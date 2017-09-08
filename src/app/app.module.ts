@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ArticleService} from './article.service'
+import {ArticleService} from './article.service';
+import { SingleArticleComponent } from './single-article/single-article.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SingleArticleComponent
   ],
   imports: [
     BrowserModule,
