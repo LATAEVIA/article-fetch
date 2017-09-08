@@ -11,9 +11,13 @@ export class AppComponent implements OnInit {
   constructor(private articleService:ArticleService) {
 
   }
+
   articles = [];
+  moreArticles = [];
   ngOnInit(){
     this.articleService.getArticles().subscribe(responseArticles => this.articles = responseArticles);
+    this.articleService.getMoreArticles().subscribe(responseArticles => this.articles = responseArticles);
   }
-  // title = this.articles[1];
+  ngAfterViewInit (){
+  }
 }
